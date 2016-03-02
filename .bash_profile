@@ -2,8 +2,6 @@
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
-export PATH=$PATH
-
 # Highlight section titles in manual pages
 export LESS_TERMCAP_md="$ORANGE"
 
@@ -22,6 +20,7 @@ source ~/.git-completion.bash
 
 # load extra settings that are not commited to source control
 [ -r ~/.extra ] && [ -f ~/.extra ] && source ~/.extra;
+[ -r ~/.path ] && [ -f ~/.path ] && source ~/.path;
 
 # convenience shortcuts
 alias shellrefresh=". ~/.bash_profile"
