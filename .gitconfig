@@ -24,7 +24,7 @@
 	smudge = git media smudge %f
 [user]
 	name = Hlynur Tryggvason
-	email = h@x0r.is
+	email = hlynur@wuxinextcode.com
 [push]
 	default = simple
 [filter "lfs"]
