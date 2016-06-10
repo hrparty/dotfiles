@@ -55,9 +55,7 @@ function server() {
 	python -c $'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();' "$port"
 }
 
-# Generates a random string, for example password
+# Generates a random string, and puts it into the clipboard
 genpasswd() {
-	local l=$1
-       	[ "$l" == "" ] && l=20
-      	tr -dc A-Za-z0-9_ < /dev/urandom | head -c ${l} | xargs
+	openssl rand -base64 32 | tr -d '\n' | pbcopy
 }
