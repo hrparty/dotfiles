@@ -54,3 +54,10 @@ function server() {
 	# And serve everything as UTF-8 (although not technically correct, this doesn’t break anything for binary files)
 	python -c $'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();' "$port"
 }
+
+# Generates a random string, for example password
+genpasswd() {
+	local l=$1
+       	[ "$l" == "" ] && l=20
+      	tr -dc A-Za-z0-9_ < /dev/urandom | head -c ${l} | xargs
+}
