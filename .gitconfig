@@ -18,6 +18,11 @@
 	# a.k.a. ‘delete merged’
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
+	# Delete branch shortcut
+	db = branch --delete
+
+	c = checkout
+
 [filter "media"]
 	required = true
 	clean = git media clean %f
