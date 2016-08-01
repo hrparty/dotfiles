@@ -8,6 +8,8 @@ export LESS_TERMCAP_md="$ORANGE"
 # Always enable colored `grep` output
 export GREP_OPTIONS="--color=auto"
 
+export EDITOR="atom"
+
 # autocomplete options
 bind '"\t":menu-complete'
 bind "set completion-ignore-case on"
@@ -25,6 +27,8 @@ source ~/.git-completion.bash
 # convenience shortcuts
 alias shellrefresh=". ~/.bash_profile"
 alias ..="cd .."
+alias ll="ls -l"
+alias la="ls -la"
 
 # pretty prints a folder structure out of current folder and its subdirectories
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
