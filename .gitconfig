@@ -21,7 +21,7 @@
 	# Delete branch shortcut
 	db = branch --delete
 
-	c = checkout
+	co = checkout
 
 [filter "media"]
 	required = true
