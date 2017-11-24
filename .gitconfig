@@ -40,3 +40,5 @@
 	helper = osxkeychain
 [diff]
 	compactionHeuristic = true
+[core]
+	excludesfile = /Users/hlynur/.gitignore_global
